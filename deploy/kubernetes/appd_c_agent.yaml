@@ -1,0 +1,10 @@
+apiVersion: cluster.appdynamics.com/v1alpha1
+kind: Clusteragent
+metadata:
+ name: k8s-cluster-agent
+ namespace: appd
+spec:
+ controllerUrl: "http://bruce202304120138358.saas.appdynamics.com"
+ account: "bruce202304120138358"
+ appName: "Jmeter"
+ image: docker.io/appdynamics/cluster-agent:21.12.0
