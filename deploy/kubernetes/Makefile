@@ -9,7 +9,9 @@ check-complete-demo:
 	awk '{print}' ${MANIFESTS}/* | diff complete-demo.yaml -
 .dockerimage: Dockerfile
 	docker build -t manifests-image .
-	touch .dockerimage
+	# touch .dockerimage
+	copy nul .dockerimage
+	echo. > .dockerimage
 
 .PHONY: docker-%
 docker-%: .dockerimage
